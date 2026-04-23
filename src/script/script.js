@@ -90,18 +90,6 @@ document.querySelectorAll('.hero-btn').forEach(btn => {
     btn.addEventListener('click', () => switchPage(btn.dataset.target));
 });
 
-// ===== CONTACT FORM =====
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('form-name').value.trim();
-        const message = document.getElementById('form-message').value.trim();
-        const text = encodeURIComponent(`Hi John Paul! I'm ${name}. ${message}`);
-        window.open(`https://m.me/johnpaul.ocampo09?text=${text}`, '_blank');
-    });
-}
-
 // ===== ACHIEVEMENT FILTER =====
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
